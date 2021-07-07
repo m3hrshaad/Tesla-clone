@@ -3,11 +3,8 @@ import styled from 'styled-components';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 
-
-
 function Header() {
     const [burgerStatus, setBurgerStates] = useState(false);
-
 
     return (
         <Container>
@@ -15,9 +12,12 @@ function Header() {
                 <img src="/images/logo.svg"></img>
             </a>
             <MenuGroup>
-                <div>Model S</div>
-                <div>Model X</div>
-                <div>Model Y</div>
+                <div><a href="#">Model S</a></div>
+                <div><a href="#">Model 3</a></div>
+                <div><a href="#">Model X</a></div>
+                <div><a href="#">Model Y</a></div>
+                <div><a href="#">Solar Roof</a></div>
+                <div><a href="#">Solar Panel</a></div>
             </MenuGroup>
             <RightMenu>
                 <a href="#">Shop</a>
@@ -65,6 +65,8 @@ const MenuGroup = styled.div`
     text-transform: uppercase;
     padding-top: 15px; 
     div{
+        font-size: 13px;
+        color: #000000;
         font-wight: 600;
         padding: 0 15px;
         cursor: pointer;

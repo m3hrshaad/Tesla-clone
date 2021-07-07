@@ -7,14 +7,17 @@
   /* display scrollbar off for firefox */
   scrollbar-width: none; 
 }
+
 /* display scroll off */
 *::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
+
 body {
   margin: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
-
 
 a {
   text-decoration: none;
