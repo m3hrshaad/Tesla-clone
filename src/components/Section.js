@@ -1,20 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 function Section({title, description,backgroundImg, leftBtnText, rightBtnText}) {
     return (
-        <Wrap>
-            <Container bgImage={backgroundImg}>
-                <ItemText>
-                    <h1>{title}</h1>
-                    <p>{description}</p>  
-                </ItemText>
-                <ButtonGroup>
-                    <LeftButton>{leftBtnText}</LeftButton>
-                    {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
-                </ButtonGroup>
-                <DownArrow src="/images/down-arrow.svg" />
-            </Container>
+            <Wrap bgImage={backgroundImg}>
+                <Fade bottom>
+                    <ItemText>
+                        <h1>{title}</h1>
+                        <p>{description}</p>  
+                    </ItemText>
+                </Fade>
+                <Buttons>
+                    <Fade bottom>
+                        <ButtonGroup>
+                            <LeftButton>{leftBtnText}</LeftButton>
+                            {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
+                        </ButtonGroup>
+                    <DownArrow src="/images/down-arrow.svg" />
+                    </Fade>
+                </Buttons>
         </Wrap>
     )
 }
@@ -22,11 +27,6 @@ function Section({title, description,backgroundImg, leftBtnText, rightBtnText}) 
 export default Section;
 
 const Wrap = styled.div`
-    width: 100vw;
-    height: 100vh;
-`
-
-const Container = styled.div`
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -43,6 +43,10 @@ const ItemText = styled.div`
     padding-top: 15vh;
     text-align: center;
     flex-grow: 1;
+`
+
+const Buttons = styled.div`
+text-align: center;
 `
 
 const ButtonGroup = styled.div`
