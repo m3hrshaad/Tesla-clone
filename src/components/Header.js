@@ -70,9 +70,8 @@ const Menu = styled.div`
     justify-content: center;
 
     a{
-        font-size: 13px;
+        font-size: 14px;
         color: #000000;
-        text-transform: uppercase;
         font-wight: 600;
         padding: 0 10px;
         flex-wrap: nowrap;
